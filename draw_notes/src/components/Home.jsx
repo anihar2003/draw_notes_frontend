@@ -1,12 +1,10 @@
 import React from 'react'
-import Navbar from './Navbar'
 import Footer from './Footer'
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
     <div className='bg-gray-100 min-h-screen'>
-      <Navbar />
-      
       {/* Hero Section */}
       <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
         <div className='text-center'>
@@ -18,7 +16,7 @@ const Home = () => {
           </p>
           <div className='mt-8'>
             <button className='bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors'>
-              Get Started
+              <Link to='/signup'>Get Started</Link>
             </button>
           </div>
         </div>
