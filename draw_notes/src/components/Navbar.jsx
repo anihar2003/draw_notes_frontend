@@ -1,6 +1,12 @@
 // src/components/Navbar.jsx
 import React from 'react';
-import logo from '../assets/logo.svg';
+import logo from '../assets/logo.svg';  
+import RegisterPage from './RegisterPage';
+
+
+const handleSignUp = () => {
+    <RegisterPage />
+}
 
 export default function Navbar() {
     return (
@@ -15,7 +21,7 @@ export default function Navbar() {
                 <button className="text-gray-700 px-4 py-2 rounded-md font-medium hover:bg-gray-100 transition-colors">
                     Login
                 </button>
-                <button className="text-white bg-blue-600 px-4 py-2 rounded-md font-medium hover:bg-blue-700 shadow-md transition-transform transform hover:scale-105">
+                <button className="text-white bg-blue-600 px-4 py-2 rounded-md font-medium hover:bg-blue-700 shadow-md transition-transform transform hover:scale-105" onClick={handleSignUp}>
                     Sign Up
                 </button>
             </div>
