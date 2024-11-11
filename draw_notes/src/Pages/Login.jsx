@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import * as Yup from 'yup';
 import { useFormik } from 'formik';
 import axios from 'axios';
+import Dashboard from './Dashboard';
 
 const validationSchema = Yup.object({
   email: Yup.string().email('Invalid email').required('Email is required'),
