@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-route
 import Home from './components/Home';
 import Navbar from './components/Navbar';
 import SignUp from './Pages/Signup';
+import Login from './Pages/Login';
 
 function App() {
   return (
@@ -14,14 +15,14 @@ function App() {
 
 function Main() {
   const location = useLocation();
-  const hideNavbarPaths = ['/signup']; 
+  const hideNavbarPaths = ['/signup','/login']; 
 
   return (
     <>
       {!hideNavbarPaths.includes(location.pathname) && <Navbar />}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Home />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
       </Routes>
     </>
